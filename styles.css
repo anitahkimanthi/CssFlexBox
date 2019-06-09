@@ -1,0 +1,108 @@
+/* --------------------------------------------------------------
+General style for the content in the body 
+--------------------------------------------------------------*/
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: #af4448;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------
+Parent container enclosing the three child divs 
+----------------------------------------------------------------*/
+#parentwrapper {
+    display: flex;
+    contain: content;
+    width: 1000px;
+    background: #e57373;
+    flex-wrap: wrap;
+    padding: 12.5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------
+styles applying to all boxes in the parent conatiner 
+----------------------------------------------------------------*/
+.box{
+    border: 1px solid #ccc;
+    background:#ffa4a2;
+    color:#000;
+    height: 350px;
+    margin: 12.5px;
+    flex: 1 0 10%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+/* ---------------------------------------------------------------
+effect applied to the first box when you hover on parent container
+----------------------------------------------------------------*/
+#parentwrapper:hover .box1 {
+    animation-name: bounceIn; /* bouncing from the inside */
+    animation-duration: .3s; /* time taken for the bounce stop */
+    animation-delay: 0s; /* delay time before bouncing */
+    background: #707372;/*add background color effect */
+    border: none; /* remove border */
+    color:#fff; /* color changes to white on hover */
+    transition: .5s ease-in; /* fading from inside */
+    transition-delay: 0s; /* delay time before showing effect */
+}
+
+/* ------------------------------------------------------------------------
+ effect applied to the secont/middle box when you hover on parent container 
+ -------------------------------------------------------------------------*/
+#parentwrapper:hover .box2 {
+    animation-name: bounceIn; /* bouncing from the inside */
+    animation-duration: .3s; /* time taken for the bounce stop */
+    animation-delay: .5s; /* delay time before bouncing */
+    background: #F9423A; /* add background color*/
+    border: none; /* remove border */
+    color:#fff; /* color changes to white on hover */
+    transition: .5s ease-in; /* fading from inside */
+    transition-delay: .5s; /* delay time before showing effect */
+}
+/* ---------------------------------------------------------------
+effect applied on the third box when you hover on parent container 
+---------------------------------------------------------------- */
+#parentwrapper:hover .box3 {
+    animation-name: bounceIn; /* bouncing from the inside */
+    animation-duration: .3s; /* time taken for the bounce stop */
+    animation-delay: 1s; /* delay time before bouncing */
+    background: #2CD5C4; /* add background color*/
+    border: none; /* remove border */
+    color:#fff; /* color changes to white on hover */
+    transition: .5s ease-in; /* fading from inside */
+    transition-delay: 1s; /* delay time before showing effect */
+}
+
+/* ----------------------------------------------------------------
+ bouncing effect of each box 
+ ----------------------------------------------------------------*/
+@keyframes bounceIn{
+    0%{
+        transform: scale(.1);
+    }
+    25%{
+        transform: scale(.3)
+    }
+    50%{
+        transform: scale(.5);
+    }
+    70%{
+        transform: scale(.9)
+    }
+    100%{
+        transform: scale(1);
+    }
+}
